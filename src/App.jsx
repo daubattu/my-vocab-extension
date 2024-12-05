@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Input } from 'antd';
-import { onAuthStateChanged } from "firebase/auth";
+import { Input, Tabs } from 'antd';
+import { onAuthStateChanged } from "firebase/auth/web-extension";
 import { auth } from './configs/firebase.config';
 
 import TextToSpeech from './components/TextToSpeech';
 import LoginModule from './modules/auth/login';
 
 import './App.css'
+import Header from './modules/main/components/Header';
+import MainModule from './modules/main';
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -36,18 +38,7 @@ const App = () => {
     return <LoginModule />
   }
 
-  return (
-    <div>
-      <h1>Text to Speech App</h1>
-      <Input
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Enter text"
-      />
-      <TextToSpeech text={text} />
-    </div>
-  );
+  return <MainModule />
 };
 
 export default App;
