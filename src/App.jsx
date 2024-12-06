@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Input, Tabs } from 'antd';
-import { onAuthStateChanged } from "firebase/auth/web-extension";
+import { onAuthStateChanged } from "firebase/auth";
 import { auth } from './configs/firebase.config';
 
 import TextToSpeech from './components/TextToSpeech';

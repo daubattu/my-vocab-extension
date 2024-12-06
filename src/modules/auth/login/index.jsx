@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Form, Input } from "antd";
-import { signInWithEmailAndPassword } from "firebase/auth/web-extension";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../../configs/firebase.config'
 
 export default function LoginModule() {
